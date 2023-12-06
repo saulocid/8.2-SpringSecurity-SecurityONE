@@ -1,0 +1,40 @@
+body {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    justify-items: center;
+    background-color: #ffffff;
+    columns: #000000;
+}
+
+header {
+    padding: 50px;
+    background-image: url("img/fondo-fit.jpg");
+}
+
+.haeder {
+    filter: drop-shadow(0 0 2px #ffffff);
+    color: #000000;
+}
+
+.tabla-alimentacion {
+    max-width: 90%;
+    color: #ffffff;
+    background-color: #580000;
+    border-radius: 7px;
+    border: black 1px solid;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+
+    border-collapse: collapse;
+    margin: 25px;
+}
+
+td, th{
+    padding: 10px;
+    border: 1px solid black;
+}
