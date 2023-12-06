@@ -1,5 +1,5 @@
 package com.SauloCidDev.SecurityONE.services;
 
-public class registerservices {
+public class RegisterService {
     
 }

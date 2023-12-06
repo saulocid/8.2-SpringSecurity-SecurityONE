@@ -7,9 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.PostMapping;
 
-
 @Controller
-@RequestMapping("/login")
+@RequestMapping("/")
 public class LoginController {
 
     @GetMapping("/")
@@ -19,10 +18,8 @@ public class LoginController {
 
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, ModelMap model){
-
+        model.addAttribute(password, model);
         return "index";
     }
-    
-    
     
 }
