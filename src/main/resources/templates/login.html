@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Documento</title>
-    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" th:href="@{/login.css}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body>
     <div class="wrapper">
-        <form action="" class="form">
+        <form action="/login" class="form" method="post">
             <h1 class="title">Inicio</h1>
             <div class="inp">
-                <input type="text" name="" id="" class="input" placeholder="Usuario">
+                <input type="text" name="email" id="email" class="input" placeholder="Usuario">
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="inp">
-                <input type="password" name="" id="" class="input" placeholder="Contraseña">
+                <input type="password" name="password" id="password" class="input" placeholder="Contraseña">
                 <i class="fas fa-lock"></i>
             </div>
             <button class="sumbit">Iniciar Sesión</button>
-            <p class="fooster">¿No tienes cuenta?<a href="#" class="link"> Regístrate</a></p>
+            <p class="fooster">¿No tienes cuenta?<a href="/register/" class="link"> Regístrate</a></p>
         </form>
         <div></div>
         <div class="banner">
