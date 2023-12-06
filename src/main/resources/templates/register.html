@@ -14,16 +14,20 @@
         <form action="/register" class="form" method="post">
             <h1 class="title">Registro de usuario</h1>
             <div class="inp">
-                <input type="text" name="username" id="username" class="input" placeholder="Usuario">
+                <input type="text" name="username" id="username" class="input" placeholder="Usuario" required>
+                <i class="fa-solid fa-user" required></i>
+            </div>
+            <div class="inp">
+                <input type="text" name="email" id="email" class="input" placeholder="Igrese un Email" required>
                 <i class="fa-solid fa-user"></i>
             </div>
             <div class="inp">
-                <input type="password" name="password" id="password" class="input" placeholder="Contraseña">
+                <input type="password" name="password" id="password" class="input" placeholder="Contraseña" required>
                 <i class="fas fa-lock"></i>
             </div>
             <div class="inp">
                 <input type="password" name="passConfirm" id="passConfirm" class="input"
-                    placeholder="Repetir contraseña">
+                    placeholder="Repetir contraseña" required>
                 <i class="fas fa-lock"></i>
             </div>
             <button class="sumbit">Registrar</button>
