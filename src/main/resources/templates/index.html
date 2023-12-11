@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <header>
+        <h1>
+            Bienvenidos al INDEX
+        </h1>
+    </header>
+    <section>
+        <h2>
+            Usuario: <span th:text="${usuaio.userName}"></span>
+        </h2>
+        <p>
+            Contraseña: <span th:text="${usuaio.password}"></span>
+        </p>
+    </section>
+</body>
+</html>

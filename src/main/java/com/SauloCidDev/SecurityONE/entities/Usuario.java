@@ -8,18 +8,18 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class User {
+public class Usuario {
 
     @Id
     @GeneratedValue( generator = "uuid")
     private String id;
-    private String username;
+    private String userName;
     private String password;
     private String email;
     @Enumerated(EnumType.STRING)
     private Rol rol;
 
-    public User() {
+    public Usuario() {
     }
 
     public String getEmail() {
@@ -38,8 +38,8 @@ public class User {
         return rol;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
     public void setEmail(String email) {
@@ -58,8 +58,8 @@ public class User {
         this.rol = rol;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
     
 }

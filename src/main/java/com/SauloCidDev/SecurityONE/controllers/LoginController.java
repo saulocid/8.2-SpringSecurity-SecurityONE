@@ -5,6 +5,9 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.SauloCidDev.SecurityONE.entities.Usuario;
+
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
@@ -18,7 +21,10 @@ public class LoginController {
 
     @PostMapping("/login")
     public String login(@RequestParam String username, @RequestParam String password, ModelMap model){
-        model.addAttribute(password, model);
+        Usuario u = new Usuario();
+        u.setUserName(username);
+        u.setPassword(password);
+        model.addAttribute("usuario", u);
         return "index";
     }
     

@@ -9,7 +9,7 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import com.SauloCidDev.SecurityONE.services.UserService;
+import com.SauloCidDev.SecurityONE.services.UsuarioService;
 
 @Configuration
 @EnableWebSecurity
@@ -17,11 +17,11 @@ import com.SauloCidDev.SecurityONE.services.UserService;
 public class WebSecurity {
 
     @Autowired
-    public UserService indexService;
+    public UsuarioService userService;
 
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(indexService).passwordEncoder(new BCryptPasswordEncoder());
+        auth.userDetailsService(userService).passwordEncoder(new BCryptPasswordEncoder());
     }
 
     @Bean
@@ -31,7 +31,7 @@ public class WebSecurity {
                         .requestMatchers("/**").permitAll())
                 .formLogin((login) -> login
                         .loginPage("/login")
-                        .usernameParameter("username"))
+                        .usernameParameter("userName"))
                 .logout((logout) -> logout
                         .logoutUrl("/logout"))
                 .csrf((csrf) -> csrf.disable());

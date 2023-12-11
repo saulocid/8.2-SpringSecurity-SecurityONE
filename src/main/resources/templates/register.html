@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -11,10 +11,10 @@
 
 <body>
     <div class="wrapper">
-        <form action="/register" class="form" method="post">
+        <form action="@{/register}" class="form" method="post">
             <h1 class="title">Registro de usuario</h1>
             <div class="inp">
-                <input type="text" name="username" id="username" class="input" placeholder="Usuario" required>
+                <input type="text" name="userName" id="userName" class="input" placeholder="Usuario" required>
                 <i class="fa-solid fa-user" required></i>
             </div>
             <div class="inp">
